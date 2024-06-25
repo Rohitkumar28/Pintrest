@@ -1,0 +1,14 @@
+<% include ./partials/header.ejs %>
+     <div class="w-full h-screen bg-zinc-800 flex items-center justify-center">
+      <div class="w-80 min-h-96 bg-zinc-100 px-4 py-5 rounded-md">
+        <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="w-10 h-10 mx-auto" />
+        <p class="text-center font-bold text-lg text-zinc-500 my-5">Edit Profile</p>
+
+        <form action="/update" method="post" class=" mx-4">
+          <input type="text" name="name" placeholder="FullName" value="<%= user.name %>" class="w-full py-2 px-2 my-2 rounded-xl" />
+          <input type="text" name="username" placeholder="Username" value="<%= user.username %>" class="w-full py-2 px-2 my-2 rounded-xl" />
+          <input type="submit" value="Update" class="w-full text-white py-2 px-2 my-2 bg-sky-500 border-2 rounded-xl"/>
+        </form>
+      </div>
+     </div>
+<% include ./partials/footer.ejs %>

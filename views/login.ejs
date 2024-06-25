@@ -1,0 +1,20 @@
+<% include ./partials/header.ejs %>
+     <div class="w-full h-screen bg-zinc-300 flex items-center justify-center">
+      <div class="w-80 min-h-96 bg-zinc-100 px-4 py-5 rounded-md">
+        <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="w-10 h-10 mx-auto" />
+        <p class="text-center font-bold text-lg text-zinc-500 my-5">Login to see more</p>
+
+        <% if(error.length >0) { %>
+          <p class="text-red-700 mx-4 font-bold text-center "><%= error %></p>
+        <% } %>
+
+        <form action="/login" method="post" class=" mx-4">
+          <input type="text" name="username" placeholder="Username" class="w-full py-2 px-2 my-2 rounded-xl" />
+          <input type="password" name="password" placeholder="Password" class="w-full py-2 px-2 my-2 rounded-xl"/>
+          <input type="submit" value="Login My Account" class="w-full text-white py-2 px-2 my-2 bg-sky-500 border-2 rounded-xl"/>
+          <p class="text-center text-sky-500 my-2 cursor-pointer">Forget Password ?</p>
+        </form>
+        <a href="/" class="mx-10 text-zinc-700">Not on Pinterest yet? Sign up</a>
+      </div>
+     </div>
+<% include ./partials/footer.ejs %>

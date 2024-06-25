@@ -1,0 +1,14 @@
+@media only screen and (max-width: 1140px) {
+    .navbar .hdn{
+        display: none;
+    }
+
+    .footbar {
+        display: flex;
+    }
+
+    .cards {
+        align-items: center;
+        justify-content: center;
+    }
+}
